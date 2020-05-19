@@ -1,0 +1,2 @@
+export const CORRELATION_ID_HEADER_NAME = "correlation-id";
+export const DEFAULT_INTERNAL_SERVER_ERROR_CODE = "INTERNAL_SERVER_ERROR";

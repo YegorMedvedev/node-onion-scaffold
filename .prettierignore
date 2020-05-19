@@ -1,0 +1,12 @@
+node_modules/
+build/
+.idea
+.dockerignore
+.editorconfig
+.gitignore
+.gitlab-ci.yml
+.npmrc
+.prettierignore
+.prettierrc
+.yarnrc
+Dockerfile
