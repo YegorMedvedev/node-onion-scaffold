@@ -1,0 +1,58 @@
+components:
+  schemas:
+    ApplicationHealthDto:
+      type: object
+      properties:
+        node:
+          type: string
+          example: "12.11.0"
+        version:
+          type: string
+          example: "1.2.0"
+        name:
+          type: string
+          example: "node-onion-scaffold"
+        environment:
+          type: object
+          properties:
+            NODE_ENV:
+              type: string
+              example: "local"
+            PORT:
+              type: string
+              example: "4000"
+        memory:
+          type: object
+          properties:
+            rss:
+              type: string
+              example: "10 MB"
+            heapTotal:
+              type: string
+              example: "5 MB"
+            heapUsed:
+              type: string
+              example: "19.1 MB"
+            external:
+              type: string
+              example: "22.2 MB"
+        storage:
+          type: object
+          properties:
+            mongodb:
+              type: object
+              properties:
+                status:
+                  type: string
+                  example: "ok"
+                details:
+                  type: string;
+            postgres:
+              type: object
+              properties:
+                status:
+                  type: string
+                  example: "error"
+                details:
+                  type: string;
+                  example: "DatabaseConnectionError"

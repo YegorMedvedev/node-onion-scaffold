@@ -9,7 +9,7 @@ import {InversifyExpressServer} from "inversify-express-utils";
 
 import {container, getPort, Logger, setProcessListeners} from "./infrastructure";
 import "./infrastructure/config/config";
-import {CorrelationId, ErrorHandler} from "./api";
+import {CorrelationId, ErrorHandler, SwaggerUiServeMiddleware} from "./api";
 
 setProcessListeners();
 
@@ -23,6 +23,7 @@ new InversifyExpressServer(container)
     app.use(json());
     app.use(compression());
     app.use(CorrelationId);
+    app.use("/Application/Docs", SwaggerUiServeMiddleware);
   })
   .setErrorConfig((app: Application) => {
     app.use(ErrorHandler);
