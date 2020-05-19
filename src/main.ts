@@ -1,6 +1,7 @@
 // tslint:disable:ordered-imports
 import "reflect-metadata";
 
+import * as helmet from "helmet";
 import * as compression from "compression";
 import {json, urlencoded} from "body-parser";
 import {Application} from "express";
@@ -17,6 +18,7 @@ const logger = container.get<Logger>(Logger);
 
 new InversifyExpressServer(container)
   .setConfig((app: Application) => {
+    app.use(helmet());
     app.use(urlencoded({extended: true}));
     app.use(json());
     app.use(compression());
