@@ -1,11 +1,12 @@
 {
   "compilerOptions": {
+    "lib": ["es2020"],
     "module": "commonjs",
+    "target": "es2019",
     "declaration": true,
     "removeComments": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "target": "es2017",
     "sourceMap": true,
     "outDir": "./build",
     "baseUrl": "./",
