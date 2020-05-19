@@ -2,6 +2,7 @@
   "name": "node-onion-scaffold",
   "version": "0.0.1",
   "author": "https://github.com/YegorMedvedev",
+  "license": "MIT",
   "engines": {
     "node": ">=12.0.0"
   },
